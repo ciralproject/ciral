@@ -4,7 +4,7 @@ CIRAL (Cross-Lingual Information Retrieval for African Languages) is track at th
 
 More information regarding the track can be found at the website: [Ciral@Fire2023](https://ciralproject.github.io/)
 
-## 🌍 Corpora
+## Corpora
 
 The focus languages in the first implementation of the collection are Hausa, Swahili, Somali and Yoruba. The corpora consists of passages of news articles mined from indigenous websites of the different languages. Statistics and details of the collection are found below.
 
