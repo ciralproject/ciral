@@ -1,6 +1,6 @@
 # 🌍 CIRAL
 
-CIRAL (Cross-Lingual Information Retrieval for African Languages) is track at the Forum for Information Retrieval Evaluation (FIRE) 2023, which focuses on promoting research and evaluation of Cross-Lingual Information Retrieval (CLIR) for solely African languages. This year, one of the goals of the track is to develop the first human-annotated ad-hoc CLIR test collections for African languages, starting off with 4 languages and subsequent addition of others. This repo provides details on the test collection.
+CIRAL (Cross-Lingual Information Retrieval for African Languages) is track at the Forum for Information Retrieval Evaluation (FIRE) 2023, focused on promoting research and evaluation of Cross-Lingual Information Retrieval (CLIR) for solely African languages. This year, one of the goals of the track is to develop the first human-annotated ad-hoc CLIR test collections for African languages, starting off with 4 languages and subsequent addition of others. The repo provides details on the test collection.
 
 More information regarding the track can be found at the website: [Ciral@Fire2023](https://ciralproject.github.io/)
 
