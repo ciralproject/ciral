@@ -78,17 +78,6 @@ git clone https://huggingface.co/datasets/CIRAL/ciral
 cp -r ciral/*/*/* $PYSERINI_PATH/tools/topics-and-qrels/
 ```
 
-- Run batch retrieval using BM25 and the CIRAL [pre-built indexes](https://github.com/castorini/pyserini/blob/master/docs/prebuilt-indexes.md). `{lang}` represents language code for any of the four languages: yo (Yoruba), so (Somali), ha (Hausa) or sw (Swahili), and {set} stands for the data split i.e train or test. 
-
-```bash
-python -m pyserini.search.lucene \
-  --language {lang} \
-  --topics tools/topics-and-qrels/topics.ciral-v1.0-{lang}-{set}.tsv \
-  --index ciral-v1.0-{lang} \
-  --output runs/run.ciral.bm25.{lang}.{set}.txt \
-  --pretokenized \
-  --batch 128 --threads 16 --bm25 --hits 1000
-```
 
 ## Spacerini Integration
 Demo for using the Hybrid baseline
