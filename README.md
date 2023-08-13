@@ -4,6 +4,9 @@ CIRAL (Cross-Lingual Information Retrieval for African Languages) is a track at 
 
 More information regarding the track can be found at the website: [Ciral@Fire2023](https://ciralproject.github.io/)
 
+<br />
+<br />
+
 ## 📚 Corpora
 
 The focus languages in this first implementation of the task are Hausa, Swahili, Somali and Yoruba. The corpora consists of passages from news articles, mined from indigenous websites of the different languages. 
@@ -13,7 +16,7 @@ Link to Dataset: https://huggingface.co/datasets/CIRAL/ciral-corpus/
 Statistics and details of the collection are found below.
 
 | Language        | News Sources                           | # of Passages | # of Articles | Direct Link |
-|:----------------|:---------------------------------------|--------------:|--------------:|:------------:|
+|:-------|:------------|:-------:|:-------:|:----:|
 | Hausa (hau)     | LegitNG, DailyTrust, VOA, Isyaku, etc. |       715,355 |       240,883 | [🤗](https://huggingface.co/datasets/CIRAL/ciral-corpus/tree/main/passages-v1.0)
 | Swahili (swa)   | VOA, Tuko, Risaala, Caasimada, etc.    |       981,658 |       146,669 | [🤗](https://huggingface.co/datasets/CIRAL/ciral-corpus/tree/main/passages-v1.0)
 | Somali (som)    | VOA, UN Swahili, MTanzania, etc.       |     1,015,567 |       629,441 | [🤗](https://huggingface.co/datasets/CIRAL/ciral-corpus/tree/main/passages-v1.0)
@@ -26,6 +29,9 @@ For each language, passages are stored in [JSONL](https://jsonlines.org/) files 
 - `text`: Text of the passage
 - `url`: News article url
 
+<br />
+<br />
+
 ## 📚 Queries and Relevance Judgements
 
 The CIRAL queries and relevance judgements are provided for each of the four languages in two sets: development (currently named as Train) and test sets. They can be accessed in the [Hugging Face repo](https://huggingface.co/datasets/CIRAL/ciral)
@@ -34,9 +40,9 @@ Statistics for the Train queries and relevance judgements are given below. Th tr
 
 Statistics for the collection would be completed after **pooling**.
 
-| Language        | # Train Queries | # Train Judgements | Direct Link |
-|:----------------|:---:|:--------------:|:------------:|
-| Hausa (ha)     | 10 | 165 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-hausa)| 
+| Language  | # Train Queries | # Train Judgements | Direct Link |
+|:-------|:---:|:-------:|:------:|
+| Hausa (ha)  | 10 | 165 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-hausa)| 
 | Swahili (sw)   | 10 | 196 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-swahili) | 
 | Somali (so)    | 10 | 187 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-somali) | 
 | Yoruba (yo)    | 10 | 185 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-yoruba) |
@@ -53,6 +59,8 @@ while the judgements are in the standard TREC format:
 qid Q0 docid relevance
 ```
 
+<br />
+<br />
 
 ## 📚 Guidelines and Resources
 
@@ -63,6 +71,8 @@ Details regarding participation can be found in this [section](https://ciralproj
 For more details on understanding and getting started with the task, please check the provided (Guidelines and Resources)[Guidelines/guide.md]
 
 
+<br />
+<br />
 
 
 ## 🔎 Baselines: Reproducing BM25 Batch Retrieval
@@ -88,6 +98,8 @@ python -m pyserini.search.lucene \
   --batch 128 --threads 16 --bm25 --hits 1000
 ```
 
+<br />
+<br />
 
 ## Spacerini Integration
 Demo for using the Hybrid baseline
