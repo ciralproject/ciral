@@ -63,7 +63,7 @@ The task entails cross-lingual information retrieval with queries formulated as 
 
 Details regarding participation can be found in this [section](https://ciralproject.github.io/#participation) of the website.
 
-For more details on understanding and getting started with the task, please check the provided (Guidelines and Resources)[Guidelines/guide.md]
+For more details on understanding and getting started with the task, please check the provided [Guidelines and Resources](Guidelines/README.md)
 
 
 
