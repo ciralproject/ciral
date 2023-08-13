@@ -5,7 +5,6 @@ CIRAL (Cross-Lingual Information Retrieval for African Languages) is a track at 
 More information regarding the track can be found at the website: [Ciral@Fire2023](https://ciralproject.github.io/)
 
 <br />
-<br />
 
 ## 📚 Corpora
 
@@ -29,7 +28,6 @@ For each language, passages are stored in [JSONL](https://jsonlines.org/) files 
 - `text`: Text of the passage
 - `url`: News article url
 
-<br />
 <br />
 
 ## 📚 Queries and Relevance Judgements
@@ -60,7 +58,6 @@ qid Q0 docid relevance
 ```
 
 <br />
-<br />
 
 ## 📚 Guidelines and Resources
 
@@ -71,7 +68,6 @@ Details regarding participation can be found in this [section](https://ciralproj
 For more details on understanding and getting started with the task, please check the provided (Guidelines and Resources)[Guidelines/guide.md]
 
 
-<br />
 <br />
 
 
@@ -98,7 +94,6 @@ python -m pyserini.search.lucene \
   --batch 128 --threads 16 --bm25 --hits 1000
 ```
 
-<br />
 <br />
 
 ## Spacerini Integration

@@ -5,7 +5,6 @@ This guide is for any one who would love to participate and make a submission to
 For a quick overview of the task, please refer to the main [README](../README.md) of the repo or the track's [website](https://ciralproject.github.io/).
 
 <br />
-<br/>
 
 ## 📚 Introduction to IR
 As a great start into IR, we would majorly be working with two toolkits designed to foster research in information retrieval. First is [Anserini](https://github.com/castorini/anserini), built in Java and on the [Lucene search library](https://lucene.apache.org/) and then [Pyserini](https://github.com/castorini/pyserini) which works for both sparse and dense representations and has Anserini integrated. The list provided is a good path to follow sequentially in getting started with the basics of IR (each next documents is also linked in the previous one).
@@ -20,7 +19,6 @@ As a great start into IR, we would majorly be working with two toolkits designed
 
 - Working with an Actual Dense Retrieval model. [Pyserini: Contriever Baseline for NFCorpus](https://github.com/castorini/pyserini/blob/master/docs/experiments-nfcorpus.md)
 
-<br />
 <br />
 
 
@@ -71,14 +69,12 @@ This should give the following results:
 Already built dense indexes have been provided and can be downloaded [here](). For a recap on how to build dense indexes, you can also take a look (https://github.com/castorini/pyserini/blob/master/docs/experiments-nfcorpus.md) or more generally [here](https://github.com/castorini/pyserini/blob/master/docs/usage-index.md#building-a-dense-vector-index).
 
 </br>
-</br>
 
 ## 📚 Training Dense Retrieval Models
 To train or finetune your own dense retrieval model, the [Tevatron](https://github.com/texttron/tevatron/tree/main/src/tevatron) toolkit is a good place to start. 
  - [Examples](https://github.com/texttron/tevatron/tree/main/examples) on different retrieval tasks.
 - [Documentation](http://tevatron.ai/)
 
-</br>
 </br>
 
 ## 📚 Additional Data sources
