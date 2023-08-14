@@ -56,15 +56,15 @@ python -m pyserini.eval.trec_eval -c -m recall.1000 tools/topics-and-qrels/qrels
 This should give the following results:
 | **recall@1000** | |  
 |:----------------|:---:|
-|**Language** | **BM25 (default)** |
-| Yoruba (ha)     | 0.6010 |
-| Swahili (sw)     | 0.1333 |
-| Somali (ha)     | 0.1267 |
+|**Language**    | **BM25 (default)** |
+| Yoruba (ha)    | 0.6010 |
+| Swahili (sw)   | 0.1333 |
+| Somali (ha)    | 0.1267 |
 | Hausa (ha)     | 0.1050 |
 
 
 ### Dense Retrieval 
-Already built dense indexes have been provided and can be downloaded [here](). For a recap on how to build dense indexes, you can also take a look (https://github.com/castorini/pyserini/blob/master/docs/experiments-nfcorpus.md) or more generally [here](https://github.com/castorini/pyserini/blob/master/docs/usage-index.md#building-a-dense-vector-index).
+To also reproduce results for dense retrieval, you can refer to the current baselines in the main [README](../README.md#🔎-baseline-and-evaluation)
 
 
 
