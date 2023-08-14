@@ -64,7 +64,7 @@ This should give the following results:
 
 
 ### Dense Retrieval 
-To also reproduce results for dense retrieval, you can refer to the current baselines in the main [README](../README.md#🔎-baseline-and-evaluation)
+To also reproduce results for dense retrieval, kindly refer to the current baselines in the main [README](../README.md#🔎-baseline-and-evaluation)
 
 
 
