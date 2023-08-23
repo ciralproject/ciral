@@ -57,9 +57,9 @@ This should give the following results:
 | **recall@1000** | |  
 |:----------------|:---:|
 |**Language**    | **BM25 (default)** |
-| Yoruba (ha)    | 0.6010 |
+| Yoruba (yo)    | 0.6010 |
 | Swahili (sw)   | 0.1333 |
-| Somali (ha)    | 0.1267 |
+| Somali (so)    | 0.1267 |
 | Hausa (ha)     | 0.1050 |
 
 
