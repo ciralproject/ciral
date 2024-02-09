@@ -1,14 +1,15 @@
 # 🌍 CIRAL
 
-CIRAL (Cross-Lingual Information Retrieval for African Languages) is a track at the Forum for Information Retrieval Evaluation (FIRE) 2023, focused on promoting the research and evaluation of Cross-Lingual Information Retrieval (CLIR) for solely African languages. A goal of the track is to develop the first human-annotated ad-hoc CLIR test collections for African languages, starting off with 4 languages and subsequent addition of others. This repo provides details of the test collection and guidelines for the task.
+CIRAL (Cross-Lingual Information Retrieval for African Languages) is a test collection focused on promoting the research and evaluation of Cross-Lingual Information Retrieval (CLIR) for African languages. Our collection covers cross-lingual retrieval between English and 4 African languages, with queries in English and passages in the African languages. This repo provides details of the test collection, guidelines for system evaluations and baselines.
 
+Hosted as a track at the Forum for Information Retrieval Evaluation (FIRE) 2023, the goal of our track was to promote participation and community evaluations in CLIR for African languages.
 More information regarding the track can be found at the website: [Ciral@Fire2023](https://ciralproject.github.io/)
 
-
+<!-- CIRAL (Cross-Lingual Information Retrieval for African Languages) is a track at the Forum for Information Retrieval Evaluation (FIRE) 2023, focused on promoting the research and evaluation of Cross-Lingual Information Retrieval (CLIR) for solely African languages. A goal of the track is to develop the first human-annotated ad-hoc CLIR test collections for African languages, starting off with 4 languages and subsequent addition of others. This repo provides details of the test collection and guidelines for the task. -->
 
 ## 📚 Corpora
 
-The focus languages in this first implementation of the task are Hausa, Swahili, Somali and Yoruba. The corpora consists of passages from news articles, mined from indigenous websites of the different languages. 
+The current languages in CIRAL are Hausa, Swahili, Somali and Yoruba. The corpora consists of passages from news articles, mined from indigenous websites of the different languages. 
 
 Link to Dataset: https://huggingface.co/datasets/CIRAL/ciral-corpus/
 
@@ -17,8 +18,8 @@ Statistics and details of the collection are found below.
 | Language        | News Sources                           | # of Passages | # of Articles | Link |
 |:-------|:------------|:-------:|:-------:|:----:|
 | Hausa (hau)     | LegitNG, DailyTrust, VOA, Isyaku, etc. |       715,355 |       240,883 | [🤗](https://huggingface.co/datasets/CIRAL/ciral-corpus/tree/main/passages-v1.0)
-| Swahili (swa)   | VOA, Tuko, Risaala, Caasimada, etc.    |       981,658 |       146,669 | [🤗](https://huggingface.co/datasets/CIRAL/ciral-corpus/tree/main/passages-v1.0)
-| Somali (som)    | VOA, UN Swahili, MTanzania, etc.       |     1,015,567 |       629,441 | [🤗](https://huggingface.co/datasets/CIRAL/ciral-corpus/tree/main/passages-v1.0)
+| Somali (som)    | VOA, UN Swahili, MTanzania, etc.       |       827,552 |       629,441 | [🤗](https://huggingface.co/datasets/CIRAL/ciral-corpus/tree/main/passages-v1.0)
+| Swahili (swa)   | VOA, Tuko, Risaala, Caasimada, etc.    |       949,013 |       146,669 | [🤗](https://huggingface.co/datasets/CIRAL/ciral-corpus/tree/main/passages-v1.0)
 | Yoruba (yor)    | Alaroye, VON, BBC, Asejere, etc.       |        82,095 |        27,985 | [🤗](https://huggingface.co/datasets/CIRAL/ciral-corpus/tree/main/passages-v1.0)
 
 
@@ -31,18 +32,18 @@ For each language, passages are stored in [JSONL](https://jsonlines.org/) files 
 
 ## 📚 Queries and Relevance Judgements
 
-The CIRAL queries and relevance judgements are provided for each of the four languages in two sets: train and test sets. They can be accessed in the [Hugging Face repo](https://huggingface.co/datasets/CIRAL/ciral)
+CIRAL's queries and relevance judgements are provided for the four languages in three sets: development set, test set A and  test set B. Additionally, test set A consists of pools curated from CIRAL's shared task.
+The queries and relevance judgement files can be accessed in the [Hugging Face repo](https://huggingface.co/datasets/CIRAL/ciral).
 
-Statistics for the Train queries and relevance judgements are given below. The train set consists of few samples to analyze relevance and evaluate proposed systems using the provided judgements. 
+Statistics for the queries and relevance judgements are given below. The development set consists of few samples to analyze relevance and evaluate proposed systems using the provided judgements. 
 
-Statistics for the collection would be completed after **pooling**.
-
-| Language  | # Train Queries | # Train Judgements | Link |
-|:-------|:---:|:-------:|:------:|
-| Hausa (ha)  | 10 | 165 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-hausa)| 
-| Swahili (sw)   | 10 | 196 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-swahili) | 
-| Somali (so)    | 10 | 187 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-somali) | 
-| Yoruba (yo)    | 10 | 185 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-yoruba) |
+|   | Dev | | Test A | | | Test B | | |
+|:-------|:---:|:---:|:---:|:---:|:---:|:---:|:-------:|:------:|
+| **Language**  | **#Q** | **#J** | **#Q** | **#J** | **Pool Size** | **#Q** | **#J** | **Link** |
+| Hausa (ha)  | 10 | 165 | 80 | 1,447 | 7,288 | 312 | 5,930 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-hausa)| 
+| Somali (so)    | 10 | 187 | 99 | 1,798 | 9,094 | 239 | 4,324 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-somali) | 
+| Swahili (sw)   | 10 | 196 | 85 | 1,656 | 8,079 | 113 | 2,175 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-swahili) | 
+| Yoruba (yo)    | 10 | 185 | 100 | 1,921 | 8,311 | 554 | 10, 569 | [🤗](https://huggingface.co/datasets/CIRAL/ciral/tree/main/ciral-yoruba) |
 
 Both query and relevance judgements files are in the `.tsv` format. Each line in the query file is represented as:
 
@@ -89,7 +90,7 @@ Afriberta-DPR [Indexes](https://huggingface.co/datasets/CIRAL/CIRAL-Baselines/tr
 
 ```bash
 lang=yo # or ha, so, sw
-set=train # or test
+set=dev # or test
 
 tools_dir=tools/topics-and-qrels
 run_file=runs/run.ciral.afriberta-dpr.${lang}.${set}.txt
@@ -111,7 +112,7 @@ python -m pyserini.eval.trec_eval \
 ```
 
 
-### Results: Train Set
+### Results: Dev Set
 
 We present the ncdg@20 and recall@100 scores for the baselines.
 
