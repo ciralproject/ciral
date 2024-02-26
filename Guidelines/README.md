@@ -21,8 +21,8 @@ As a great start into IR, we would majorly be working with two toolkits designed
 
 
 
-## 📚 Batch Retrieval with the CIRAL Train Queries
-Now that the basic understanding of IR, Anserini and Pyserini has been accomplished, we can try out some very simple retrieval with the provided `train` queries in CIRAL using BM25. This would be done using [Pyserini](https://github.com/castorini/pyserini):
+## 📚 Trying out Retrieval with CIRAL's Dev Queries
+Now that the basic understanding of IR, Anserini and Pyserini has been accomplished, we can try out some very simple retrieval with the provided `dev` queries in CIRAL using BM25. This would be done with [Pyserini](https://github.com/castorini/pyserini):
 
 1. If not done already, clone Pyserini and install the development version of Pyserini according to these [guide](https://github.com/castorini/pyserini/blob/master/docs/installation.md#development-installation). 
 
@@ -38,19 +38,19 @@ cp -r ciral/*/*/* $PYSERINI_PATH/tools/topics-and-qrels/
 ```bash
 python -m pyserini.search.lucene \
   --language {lang} \
-  --topics tools/topics-and-qrels/topics.ciral-v1.0-{lang}-train.tsv \
+  --topics tools/topics-and-qrels/topics.ciral-v1.0-{lang}-dev.tsv \
   --index ciral-v1.0-{lang} \
-  --output runs/run.ciral-v1.0-{lang}.bm25.train.txt \
+  --output runs/run.ciral-v1.0-{lang}.bm25.dev.txt \
   --pretokenized \
   --batch 128 --threads 16 --bm25 --hits 1000
 ```
 
-This saves the run (retrieved passages) in `runs/run.ciral-v1.0-{lang}.bm25.train.txt`. You can inspect the file to see what the output (in other words submission files) looks like.
+This saves the run (retrieved passages) in `runs/run.ciral-v1.0-{lang}.bm25.dev.txt`. You can inspect the file to see what the output (in other words submission files) looks like.
 
 4. Next, we  evaluate the run. The official metrics for the track are `ndcg@20` and `recall@100`, but we only evaluate for `recall@1000` in this case (i.e the number of correct passages returned in all the 1000 passages per query)
 
 ```bash
-python -m pyserini.eval.trec_eval -c -m recall.1000 tools/topics-and-qrels/qrels.ciral-v1.0-{lang}-train.tsv runs/run.ciral-v1.0-{lang}.bm25.train.txt
+python -m pyserini.eval.trec_eval -c -m recall.1000 tools/topics-and-qrels/qrels.ciral-v1.0-{lang}-dev.tsv runs/run.ciral-v1.0-{lang}.bm25.dev.txt
 ```
 
 This should give the following results:
@@ -63,13 +63,13 @@ This should give the following results:
 | Hausa (ha)     | 0.1050 |
 
 
-### Dense Retrieval 
-To also reproduce results for dense retrieval, kindly refer to the current baselines in the main [README](../README.md#🔎-baseline-and-evaluation)
+### Reproducing CIRAL's Baselines
+Next, we can reproduce CIRAL's sparse and dense retrieval baselines as indicated in the main [README](../README.md#🔎-baseline-and-evaluation)
 
 
 
 ## 📚 Training Dense Retrieval Models
-To train or finetune your own dense retrieval model, the [Tevatron](https://github.com/texttron/tevatron/tree/main/src/tevatron) toolkit is a good place to start. 
+To train or finetune your dense retrieval model, the [Tevatron](https://github.com/texttron/tevatron/tree/main/src/tevatron) toolkit is a good place to start. 
  - [Examples](https://github.com/texttron/tevatron/tree/main/examples) on different retrieval tasks.
 - [Documentation](http://tevatron.ai/)
 
