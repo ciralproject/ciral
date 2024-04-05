@@ -76,7 +76,7 @@ For more details on getting started with IR and understanding the task, please c
 Baselines and reproduction guides are provided in this section. Please note that this only covers searching, as the indexes have already been built. <!--Add links to reproduce indexes.-->
 
 The baselines can be reproduced using [Pyserini](https://github.com/castorini/pyserini). To reproduce the baselines:
-1. Installing the development version of Pyserini by following this [guide](https://github.com/castorini/pyserini/blob/master/docs/installation.md#development-installation).
+1. Install the development version of Pyserini by following this [guide](https://github.com/castorini/pyserini/blob/master/docs/installation.md#development-installation).
 2. Follow the commands in the [2-click-reproduction (2CR)](https://castorini.github.io/pyserini/2cr/ciral.html)
 
 <!--
