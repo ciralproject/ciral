@@ -79,6 +79,27 @@ The baselines can be reproduced using [Pyserini](https://github.com/castorini/py
 1. Install the development version of Pyserini by following this [guide](https://github.com/castorini/pyserini/blob/master/docs/installation.md#development-installation).
 2. Follow the commands in the [2-click-reproduction (2CR)](https://castorini.github.io/pyserini/2cr/ciral.html)
 
+Our reranking baseline models are also available on [Hugging Face](https://huggingface.co/castorini): [mT5](https://huggingface.co/castorini/mt5-base-ft-msmarco), [AfrimT5](https://huggingface.co/castorini/afrimt5-base-ft-msmarco).
+
+## Citation
+```
+@inproceedings{10.1145/3626772.3657884,
+author = {Adeyemi, Mofetoluwa and Oladipo, Akintunde and Zhang, Xinyu and Alfonso-Hermelo, David and Rezagholizadeh, Mehdi and Chen, Boxing and Omotayo, Abdul-Hakeem and Abdulmumin, Idris and Etori, Naome A. and Musa, Toyib Babatunde and Fanijo, Samuel and Awoyomi, Oluwabusayo Olufunke and Salahudeen, Saheed Abdullahi and Mohammed, Labaran Adamu and Abolade, Daud Olamide and Lawan, Falalu Ibrahim and Sabo Abubakar, Maryam and Nasir Iro, Ruqayya and Imam Abubakar, Amina and Mohamed, Shafie Abdi and Mohamed, Hanad Mohamud and Ajayi, Tunde Oluwaseyi and Lin, Jimmy},
+title = {CIRAL: A Test Collection for CLIR Evaluations in African Languages},
+year = {2024},
+isbn = {9798400704314},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3626772.3657884},
+doi = {10.1145/3626772.3657884},
+pages = {293–302},
+numpages = {10},
+keywords = {african languages, cross-lingual information retrieval},
+location = {Washington DC, USA},
+series = {SIGIR '24}
+}
+```
+
 <!--
 #### 1. Afriberta-DPR
 
